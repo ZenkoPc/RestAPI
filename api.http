@@ -2,10 +2,10 @@
 GET http://localhost:1234/movies
 
 ### recuperar movie por id
-GET http://localhost:1234/movies/ccf36f2e-8566-47f7-912d-9f4647250bc7
+GET http://localhost:1234/movies/ad76d0b0-0824-11ef-a133-3822e215a7a8
 
 ### recuperar movies por genero
-GET http://localhost:1234/movies?genre=action
+GET http://localhost:1234/movies?genre=aCtion
 
 ### crear movie
 POST http://localhost:1234/movies
@@ -13,20 +13,25 @@ Content-Type: application/json
 
 {
     "sql": "SELECT * FROM users",
-    "title": "The Godfather 4",
-    "year": 1999,
+    "title": "The Godfather 2",
+    "year": 1985,
     "director": "Some dude",
     "duration": 175,
     "poster": "https://pbs.twimg.com/profile_images/1701878932176351232/AlNU3WTK_400x400.jpg",
-    "genre": ["Action","Drama"]
+    "genre": ["Action","Drama"],
+    "rate": 5.8
 }
 
 ### actualizar una pelicular, put completo, patch una parte
 
-PATCH http://localhost:1234/movies/ccf36f2e-8566-47f7-912d-9f4647250bc7
+PATCH http://localhost:1234/movies/ad76d66a-0824-11ef-a133-3822e215a7a8
 Content-Type: application/json
 
 {
-    "title": "Personamas",
+    "title": "The dark gentleman",
     "year": 1993
 }
+
+### eliminar una pelicula
+
+DELETE http://localhost:1234/movies/fa9cf64b-08fc-11ef-a133-3822e215a7a8
