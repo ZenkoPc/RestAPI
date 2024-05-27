@@ -1,5 +1,5 @@
 ### recuperar las movies
-GET http://localhost:1234/movies
+GET https://moviesapi-chi.vercel.app/movies
 
 ### recuperar movie por id
 GET http://localhost:1234/movies/ad76d0b0-0824-11ef-a133-3822e215a7a8
