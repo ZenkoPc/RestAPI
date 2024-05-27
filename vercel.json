@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "./server-with-mysql.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/"
+      }
+    ]
+  }
