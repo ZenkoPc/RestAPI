@@ -13,6 +13,10 @@ export const createApp = ({ movieModel }) => {
   app.disable('x-powered-by')
   app.use(json())
 
+  app.use('/', (req, res) => {
+    res.send('<h1>Welcome to the movies db api</h1>')
+  })
+
   // endpoint de movies
   app.use('/movies', createMovieRouter({ movieModel}))
 
